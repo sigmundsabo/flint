@@ -36,8 +36,8 @@ export function EdzesPage() {
 }
 
 /* ==========================================================================
-   Összesítés. Az edzsterv.netlify.app-ban felhalmozott előzmény (34 edzés,
-   465 947 kg) kiindulási alapként számít bele — az ottani tételes napló nem
+   Összesítés. Az edzsterv.netlify.app-ban felhalmozott előzmény (edzésszám
+   és összsúly) kiindulási alapként számít bele — az ottani tételes napló nem
    jött át, csak a két összesítő szám, hogy a statisztika ne nulláról induljon.
    ========================================================================== */
 function TrainingStats() {

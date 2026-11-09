@@ -302,7 +302,7 @@ Az `edzsterv.netlify.app` teljes funkcionalitása ide került:
   teljes listán végiggörgetni hosszú volt. Minden sor külön is kibontható:
   gyakorlatonként mutatja a sorozatokat.
 
-Az `edzsterv.netlify.app`-ban felhalmozott **34 edzés / 465 947 kg** kiindulási
+Az `edzsterv.netlify.app`-ban felhalmozott **edzésszám és összsúly** kiindulási
 alapként számít bele az összesítőbe; az itt rögzített edzések hozzáadódnak. Ez
 a tulajdonos saját alapvonala — ÚJ felhasználó nullával indul
 (`seed_defaults`).
