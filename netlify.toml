@@ -1,0 +1,60 @@
+# A Netlify build- és kiszolgálási beállításai.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # A Vite 8 és a TypeScript 6 friss Node-ot kér; a Netlify alapértelmezése
+  # ennél régebbi is lehet, ezért kimondjuk.
+  NODE_VERSION = "22"
+
+  # ——— IDEIGLENES: áthidalás, amíg a Supabase 402-t ad ———————————————
+  # A szervezet egress-kerete kimerült (a Calyze Storage-a miatt), ezért a
+  # Flint minden kérése elbukik. Ezzel a kapcsolóval az app helyi módban fut:
+  # belépés nélkül indul, és a public/flint-seed.json-ból tölti fel magát.
+  # VISSZAÁLLÁS: töröld ezt az egy sort, és deployolj újra.
+  VITE_FORCE_LOCAL = "1"
+
+# Egyoldalas alkalmazás: minden útvonalat az index.html szolgál ki, különben a
+# /edzes vagy a /trendek közvetlen megnyitása 404 lenne. A 200-as státusz miatt
+# ez átírás, nem átirányítás — a böngésző címsorában marad az eredeti útvonal.
+# A meglévő fájlokra (JS, CSS, kép, sw.js) ez nem vonatkozik, azokat a Netlify
+# előbb megtalálja.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# A service worker soha ne ragadjon be a CDN-en: ha egy régi sw.js marad
+# gyorsítótárban, az app nem tud frissülni.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# A buildelt kötegek, betűk és CSS neve tartalmazza a tartalom lenyomatát,
+# tehát egy fájl tartalma SOHA nem változik meg a neve alatt. Ezeket örökre
+# el lehet tenni: a telefon a második indításkor egyetlen kérést sem küld
+# értük, és repülőmódban is megvannak.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# A `public/` képek neve viszont NEM lenyomatos (`/splash.webp`,
+# `/stones/stone-3.webp`), tehát `immutable` nem adható rájuk: egy új
+# kő-sorozat után a régi ragadna be. A Netlify alapértelmezése viszont a másik
+# véglet — minden egyes megnyitáskor visszakérdez a szerverhez, ami mobilneten
+# egy teljes körülfordulás képenként, csak azért, hogy „nem változott" legyen a
+# válasz. Egy nap frissesség plusz egy hét háttérfrissítés a kettő között van:
+# a képek azonnal jönnek a tárból, és közben csendben frissülnek.
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/stones/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"

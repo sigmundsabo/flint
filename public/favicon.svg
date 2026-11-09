@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="edge" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#DFFFF4"/>
+      <stop offset="0.45" stop-color="#8FE8C8"/>
+      <stop offset="1" stop-color="#3E7F9E"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#2A3634"/>
+      <stop offset="1" stop-color="#0C1211"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="15" fill="#040404"/>
+
+  <!-- Pattintott kovakő: szögletes, kagylós törésű szilánk.
+       Szögletes forma, mert 192 képpontnál az olvasható, a gömb nem. -->
+  <path d="M33 9 L48 22 L44 42 L29 55 L17 41 L20 21 Z" fill="url(#body)"/>
+
+  <!-- A pattintás éle, ahonnan a szikra jön -->
+  <path d="M33 9 L48 22 L44 42 Z" fill="url(#edge)" opacity="0.9"/>
+  <path d="M33 9 L20 21 L29 55 Z" fill="#ffffff" opacity="0.07"/>
+
+  <!-- Belső fény a törésvonal mentén -->
+  <path d="M33 9 L44 42" stroke="#EAFFF7" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+</svg>

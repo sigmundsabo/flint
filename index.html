@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#040404" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="Flint — napi szokás- és egészségkövető" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- A barlang képe. Ez a legnagyobb kép a lapon, tehát ez dönti el, mikor
+         látszik késznek az app — és ugyanez a kép megy az indítóképernyőre és
+         a Ma fül hátterére is, tehát egyszer töltődik le, kétszer látszik.
+
+         Azért kell ide: enélkül a letöltés csak akkor indul, amikor a JS-köteg
+         már letöltődött, lefutott, a React fölépítette a lapot, és a
+         komponens effektje elért az `<img>`-ig. Telefonon az több másodperc,
+         és pontosan ez alatt látszott a rajzolt tartalék-barlang. Innen a kép
+         már a HTML OLVASÁSAKOR elindul, párhuzamosan a kötegekkel.
+
+         A betűk NEM kapnak `preload`-ot: `font-display: swap` alatt a szöveg
+         azonnal látszik a rendszerbetűvel, a woff2 pedig ne versenyezzen ezzel
+         a képpel a mobilhálózat szűk sávjáért. -->
+    <link rel="preload" as="image" href="/splash.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/mark.webp" />
+
+    <title>Flint</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

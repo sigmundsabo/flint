@@ -1,0 +1,32 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "flint-helyi-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "--mode",
+        "helyi",
+        "--port",
+        "5174",
+        "--strictPort",
+        "--host"
+      ],
+      "port": 5174
+    },
+    {
+      "name": "flint-helyi-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "preview",
+        "--mode",
+        "helyi",
+        "--port",
+        "4173"
+      ],
+      "port": 4173
+    }
+  ]
+}

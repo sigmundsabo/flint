@@ -1,0 +1,41 @@
+# Minden pusholásnál lefut, amit eddig kézzel futtattunk. Nem azért, mert a
+# kézi futtatás rossz, hanem mert a kihagyott futtatás az.
+name: Ellenőrzés
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  ellenorzes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          # Ugyanaz a Node, mint amit a netlify.toml kér — különben itt
+          # átmenne olyasmi, ami a deployon elbukik.
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Típusellenőrzés
+        run: npx tsc -b --noEmit
+
+      # Sima `oxlint`: figyelmeztetésre 0-val lép ki, hibára nem-nullával.
+      # A `--deny-warnings=false` nem létező kapcsoló — a 0.0-s futás ezen
+      # bukott el.
+      - name: Lint
+        run: npx oxlint
+
+      - name: Tesztek
+        run: npx vitest run
+
+      # A build azért van itt, mert a típusellenőrzés nem fogja meg a
+      # Vite-oldali hibákat (hiányzó eszköz, rossz import-útvonal a CSS-ben).
+      # A `helyi` mód azért, mert a CI-nak nincs és ne is legyen Supabase-kulcsa.
+      - name: Build
+        run: npx vite build --mode helyi

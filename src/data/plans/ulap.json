@@ -1,0 +1,308 @@
+[
+  {
+    "id": "lower",
+    "name": "Lower",
+    "phase": "hyper",
+    "exercises": [
+      {
+        "id": "pendulum_squat",
+        "name": "Pendulum squat",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Talp teljes felületén nyomj, térd a lábfej vonalában. Mélyre ereszkedj, de a medence ne forduljon be.",
+        "muscles": { "quads": 1, "hams": 0.5 }
+      },
+      {
+        "id": "adductor",
+        "name": "Adductor",
+        "sets": 3,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Lassan engedd szét a combod, a végponton ne pattints — a belső comb végig feszes marad.",
+        "muscles": { "quads": 0.5, "hams": 0.5 }
+      },
+      {
+        "id": "seated_leg_curl",
+        "name": "Seated leg curl",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Csípő rögzítve, a sarkat húzd a fenék felé, a visszaengedés legyen lassabb a húzásnál.",
+        "muscles": { "hams": 1 }
+      },
+      {
+        "id": "leg_extension",
+        "name": "Combfeszítő",
+        "sets": 2,
+        "repMin": 6,
+        "repMax": 8,
+        "tip": "A végpontban egy pillanatra szorítsd meg, ne lendíts. A hátad végig a támlán marad.",
+        "muscles": { "quads": 1 }
+      },
+      {
+        "id": "standing_calf",
+        "name": "Álló vádli",
+        "sets": 3,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Teljes nyújtásig engedd le a sarkat, fent emelkedj lábujjhegyre — lendület nélkül.",
+        "muscles": { "calves": 1 }
+      },
+      {
+        "id": "abdominal_crunch",
+        "name": "Abdominal crunch",
+        "sets": 3,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "A gerincet görbítsd, ne csípőből hajolj. Kilégzésre húzz össze.",
+        "muscles": { "abs": 1 }
+      }
+    ]
+  },
+  {
+    "id": "upper",
+    "name": "Upper",
+    "phase": "hyper",
+    "exercises": [
+      {
+        "id": "pullover",
+        "name": "Pullover",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Könyök enyhén hajlítva, a mozgást a hátizomból indítsd, a bordakosár maradjon lent.",
+        "muscles": { "back": 1, "chest": 0.5, "triceps": 0.25 }
+      },
+      {
+        "id": "chest_press",
+        "name": "Chest press",
+        "sets": 3,
+        "repMin": 6,
+        "repMax": 10,
+        "tip": "Csukló a könyök felett, lapocka hátra-le, és ne lökd ki teljesen a könyököt.",
+        "muscles": { "chest": 1, "triceps": 0.5, "shoulders": 0.25 },
+        "legacyIds": ["tue_3", "fri_1"]
+      },
+      {
+        "id": "shoulder_press",
+        "name": "Vállból nyomás",
+        "sets": 3,
+        "repMin": 6,
+        "repMax": 8,
+        "tip": "Ne ívelj a hátaddal felfelé, a bordakosár maradjon lent, a csukló a kar felett.",
+        "muscles": { "shoulders": 1, "triceps": 0.5 },
+        "legacyIds": ["mon_2", "fri_3"]
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Bicep curl",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "A felkar nem mozdul, lent nyújtsd ki teljesen, és ne lendíts a derékból.",
+        "muscles": { "biceps": 1 },
+        "legacyIds": ["tue_2", "fri_6"]
+      },
+      {
+        "id": "shrug",
+        "name": "Csuklya",
+        "sets": 3,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Egyenesen felfelé vond meg a vállad, ne körözz. Fent tartsd meg egy pillanatra.",
+        "muscles": { "traps": 1 }
+      },
+      {
+        "id": "lateral_raise",
+        "name": "Lateral raise",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Enyhén hajlított karral, könyökkel vezess. Ne emelj váll fölé, és ne trapézból indíts.",
+        "muscles": { "shoulders": 1 },
+        "legacyIds": ["mon_5"]
+      },
+      {
+        "id": "reverse_curl",
+        "name": "Reverse curl",
+        "sets": 2,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Felső fogás, csukló egyenes. Itt az alkar a gyenge láncszem, ezért kisebb a súly.",
+        "muscles": { "biceps": 1 },
+        "legacyIds": ["tue_6"]
+      },
+      {
+        "id": "triceps_extension",
+        "name": "Triceps extension",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Felkar fixen, csak a könyök nyújt. A végpontban szorítsd meg egy pillanatra.",
+        "muscles": { "triceps": 1 }
+      }
+    ]
+  },
+  {
+    "id": "anterior",
+    "name": "Anterior",
+    "phase": "strength",
+    "exercises": [
+      {
+        "id": "chest_press",
+        "name": "Chest press",
+        "sets": 3,
+        "repMin": 6,
+        "repMax": 8,
+        "tip": "Nehezebb súly, kevesebb ismétlés. Lapocka hátra-le, a mozgás vége kontrollált.",
+        "muscles": { "chest": 1, "triceps": 0.5, "shoulders": 0.25 },
+        "legacyIds": ["tue_3", "fri_1"]
+      },
+      {
+        "id": "shoulder_press",
+        "name": "Vállból nyomás",
+        "sets": 2,
+        "repMin": 6,
+        "repMax": 8,
+        "tip": "Ne ívelj a hátaddal felfelé, a bordakosár maradjon lent, a csukló a kar felett.",
+        "muscles": { "shoulders": 1, "triceps": 0.5 },
+        "legacyIds": ["mon_2", "fri_3"]
+      },
+      {
+        "id": "leg_extension",
+        "name": "Combfeszítő",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "A végpontban egy pillanatra szorítsd meg, ne lendíts. A hátad végig a támlán marad.",
+        "muscles": { "quads": 1 }
+      },
+      {
+        "id": "incline_chest_press",
+        "name": "Incline chest press",
+        "sets": 3,
+        "repMin": 6,
+        "repMax": 8,
+        "tip": "30–45 fokos dőlés, a felső mellre fókuszálj, a lapocka maradjon hátrahúzva.",
+        "muscles": { "chest": 1, "shoulders": 0.5, "triceps": 0.5 }
+      },
+      {
+        "id": "hammer_curl",
+        "name": "Hammer curl",
+        "sets": 2,
+        "repMin": 6,
+        "repMax": 8,
+        "tip": "Hüvelykujj felfelé, a felkar nem mozdul — a kalapácsfogás az alkart is viszi.",
+        "muscles": { "biceps": 1 },
+        "legacyIds": ["tue_4"]
+      },
+      {
+        "id": "pec_deck",
+        "name": "Pec deck",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Mellkas ki, a kart ne nyújtsd ki teljesen, a végpontban szorítsd össze a mellet.",
+        "muscles": { "chest": 1 },
+        "legacyIds": ["tue_5", "fri_4"]
+      },
+      {
+        "id": "biceps_curl",
+        "name": "Bicep curl",
+        "sets": 2,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "A felkar nem mozdul, lent nyújtsd ki teljesen, és ne lendíts a derékból.",
+        "muscles": { "biceps": 1 },
+        "legacyIds": ["tue_2", "fri_6"]
+      }
+    ]
+  },
+  {
+    "id": "posterior",
+    "name": "Posterior",
+    "phase": "hyper",
+    "exercises": [
+      {
+        "id": "lat_pulldown",
+        "name": "Lehúzás",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Lapockát hátra-le, a mozgást a hátból indítsd, ne a karból. A rudat a kulcscsonthoz húzd.",
+        "muscles": { "back": 1, "biceps": 0.5 },
+        "legacyIds": ["mon_1", "fri_2"]
+      },
+      {
+        "id": "seated_leg_curl",
+        "name": "Seated leg curl",
+        "sets": 2,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Csípő rögzítve, a sarkat húzd a fenék felé, a visszaengedés legyen lassabb a húzásnál.",
+        "muscles": { "hams": 1 }
+      },
+      {
+        "id": "seated_row",
+        "name": "Hashoz húzás",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Gerinc egyenes, a könyök a törzs mellett halad, a végén szorítsd össze a lapockát.",
+        "muscles": { "back": 1, "biceps": 0.5, "traps": 0.5 },
+        "legacyIds": ["mon_3", "fri_7"]
+      },
+      {
+        "id": "standing_calf",
+        "name": "Álló vádli",
+        "sets": 2,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Teljes nyújtásig engedd le a sarkat, fent emelkedj lábujjhegyre — lendület nélkül.",
+        "muscles": { "calves": 1 },
+        "legacyIds": ["wed_5", "sat_3"]
+      },
+      {
+        "id": "reverse_fly",
+        "name": "Reverse fly",
+        "sets": 3,
+        "repMin": 8,
+        "repMax": 10,
+        "tip": "Enyhén hajlított karral nyiss, a hátsó deltát célozd. Kis súly, tiszta mozgás.",
+        "muscles": { "shoulders": 1, "back": 0.5, "traps": 0.5 },
+        "legacyIds": ["mon_7"]
+      },
+      {
+        "id": "triceps_overhead",
+        "name": "Triceps extension fel",
+        "sets": 2,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Felkar fixen a fej mellett, csak az alkar mozog. Nyújtásban érzed a hosszú fejet.",
+        "muscles": { "triceps": 1 },
+        "legacyIds": ["mon_4"]
+      },
+      {
+        "id": "back_extension",
+        "name": "Mélyhát",
+        "sets": 2,
+        "repMin": 8,
+        "repMax": 12,
+        "tip": "A csípőből hajolj, a gerinc végig egyenes. Fent ne feszítsd túl hátra magad.",
+        "muscles": { "back": 1 },
+        "legacyIds": ["mon_6"]
+      },
+      {
+        "id": "triceps_pushdown",
+        "name": "Triceps extension le",
+        "sets": 2,
+        "repMin": 10,
+        "repMax": 12,
+        "tip": "Felkar a törzshöz közel, csak a könyök nyújt, a végpontban rövid szorítás.",
+        "muscles": { "triceps": 1 },
+        "legacyIds": ["mon_8", "fri_5"]
+      }
+    ]
+  }
+]

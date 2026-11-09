@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Titkok -----------------------------------------------------------------
+# Minden .env kimarad, KIVÉVE a példát. Nem felsorolással, hanem mintával:
+# egy új .env.valami így nem csúszhat be véletlenül.
+.env
+.env.*
+!.env.example
+
+# A Netlify helyi állapota (site id) — gépenként más.
+.netlify
+
+# --- EGÉSZSÉGADAT — SOHA NE KERÜLJÖN A GIT-ELŐZMÉNYBE -----------------------
+# Ezek a fájlok a tulajdonos valódi napló-, testsúly- és egészségadatát
+# tartalmazzák. A git-előzményből utólag kivenni fájdalmas (minden commitot
+# újra kell írni), ezért inkább be se kerüljenek.
+#
+# A `flint-seed.json` a helyi mód kiinduló adata: a BUILD-hez kell, a
+# verziókövetéshez nem. A Netlify-deploy ezt a mappát tölti fel közvetlenül,
+# nem a gitből dolgozik, tehát a kihagyás nem töri el a kiszolgálást.
+public/flint-seed.json
+backup/
+_exportok/
+*-export-*.json
+flint-helyi-*.json
